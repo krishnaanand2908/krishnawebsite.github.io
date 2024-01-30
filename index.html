@@ -4,113 +4,947 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise 3 || Card Making</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500&family=Poppins&display=swap');
+        a:hover {
+            color: cadetblue;
+        }
 
-        * {
-            padding: 0;
-            margin: 0;
+        a:link {
+            color: burlywood;
+        }
 
+        a:active {
+            color: darkslategrey;
         }
 
         body {
-            background-color: rgb(241, 235, 226);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .card {
-            background-color: #ffffff;
-            box-shadow: 4px 5px 9px 0px;
-            ;
-            height: 700px;
-            width: 465px;
-            /* border: 2px solid black; */
-            border-radius: 30px;
-            font-family: 'Baloo Bhai 2', cursive, sans-serif;
-            margin: 12px;
+        header {
+            background-color: rgb(51, 51, 51);
+            color: white;
+            text-align: center;
+            padding: 1em;
         }
 
-        .image {
-            border: 2px solid black;
-            min-height: 300px;
-            min-width: 440px;
-            position: relative;
-            border-radius: 30px;
-            left: 10px;
-            top: 7px;
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 15px;
         }
 
-        .caption1 {
-            border: 1px solid black;
-            border-radius: 15px;
-            padding: 4px;
-            position: relative;
-            top: 10px;
-            left: 20px;
+        footer {
+            background-color: rgb(51, 51, 51);
+            color: white;
+            text-align: center;
+            padding: 12;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
 
-        .caption2 {
-            border: 1px solid black;
-            border-radius: 15px;
-            padding: 4px;
-            position: relative;
-            top: 10px;
-            left: 30px;
+        code {
+            padding: 10px;
+            margin: 10px;
+            display: block;
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
 
-        .card-title {
-            position: relative;
-            margin: 12px;
-            top: 10px;
+        output {
+            padding: 10px;
+            margin: 10px;
+            display: block;
+            background-color: #f3f4f5;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
 
-        .card-content {
-            margin: 12px;
+        nav ul {
+            display: flex;
         }
 
-        .readmore {
-            border: 2px solid #00d9ff;
-            padding: 7px;
-            margin: 170px;
-            font-size: 20px;
-            border-radius: 18px;
-            color: #00d9ff;
-            background-color: #00e1ff38;
-            font-weight: 550;
+        nav ul li {
+            padding-left: 10vw;
+            padding-right: 10vw;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            list-style: none;
+        }
+
+        nav ul li a {
+            font-size: large;
+            color: white;
+            font-weight: 500;
         }
     </style>
+    <title>Python Krishna</title>
 </head>
 
 <body>
-    <div class="card">
-        <header class="card-head">
-            <div class="card-img">
-                <img class="image" src="https://picsum.photos/440/300" alt="Loading">
+
+    <header>
+        <div class="head">
+            <h1>Welcome to Python Programming Guide</h1>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="https://www.youtube.com/@pythonkrishna290" target="_blank">YouTube</a>
+
+                </li>
+                <li>
+                    <a href="https://github.com/krishnaanand2908" target="_blank">GitHub</a>
+
+                </li>
+                <li>
+                    <a href="mailto:pythonkrishna290@gmail.com">Gmail</a>
+
+                </li>
+                <li>
+                    <a href="https://replit.com/@PythonKrishna29" target="_blank">Replit</a>
+
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section id="introduction">
+        <h2>Introduction to Python</h2>
+        <p>Python is a powerful and versatile programming language known for its readability and simplicity. It is
+            widely
+            used in various fields such as web development, data science, artificial intelligence, and more.</p>
+        <h3>Definition of Python</h3>
+        <p>Python is a <strong>general-purpose</strong>, <strong>high-level</strong>, <strong>dynamically
+                typed</strong>,
+            <strong>platform-independent</strong>, and <strong>interpreted</strong> programming language!
+        </p>
+    </section>
+
+    <hr>
+
+    <section id="getting-started">
+        <h2>Getting Started with Python</h2>
+        <p>To begin your Python journey, you can download and install Python from the <a
+                href="https://www.python.org/downloads/" target="_blank">official website</a>. Follow the installation
+            instructions for your operating system.</p>
+        <h3>Setting up a Development Environment</h3>
+        <section id="development-environment">
+            <div id="note-vscode">
+                <strong>NOTE:</strong> For development, you can use any Code Editor/IDE like
+                <a href="https://www.jetbrains.com/pycharm/" target="_blank">Jetbrains PyCharm</a>,
+                <a href="https://www.sublimetext.com/">Sublime Text</a>, etc.
+                <p>But in this course, I will be using <a href="https://code.visualstudio.com/" target="_blank">Visual
+                        Studio Code (VSCode)</a>.</p>
             </div>
-            <span class="caption1">
-                SigmaWebDev
-            </span>
-            <span class="caption2">
-                Exercise 3
-            </span>
-        </header>
+            <p>In Visual Studio Code, right-click to see a dialog box and click on "New File." Name the file and add the
+                extension ".py." ".py" is the extension of all Python files except for some special Python files like
+                ".pyi," ".pyb," ".pyc," etc.</p>
+            <p>When everything is done, write the following code:</p>
+            <code>print("Hello, World!")</code>
+            <p>Now when you run the program you will see the following output:</p>
+            <output>Hello, World!</output>
+        </section>
+    </section>
 
-        <main class="card-main">
-            <h2 class="card-title">CodeWithHarry</h1>
-            <p class="card-content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae dolores similique officia aut alias
-                perferendis illum deserunt corporis. Facilis vitae enim necessitatibus praesentium ad aliquid,
-                accusantium voluptatem laboriosam recusandae? Odio qui fugit doloribus, iure saepe quidem quibusdam
-                corporis, aut illo sunt magnam dolor optio recusandae nihil alias. Illo, modi eos?
-            </p>
-        </main>
+    <hr>
 
-        <footer class="card-foot">
-            <span class="readmore">
-                Read More
-            </span>
-        </footer>
-    </div>
+    <section id="python-tokens">
+        <h2>Understanding Python Tokens</h2>
+        <p>In Python, a <strong>token</strong> is the smallest unit in the language. These tokens are the building
+            blocks of Python code and can be classified into several categories:</p>
+
+        <h3>1. Keywords</h3>
+        <p>Keywords are reserved words in Python that have special meanings. They cannot be used as identifiers
+            (variable names) and are an essential part of the language's syntax. These are the keywords in python:
+            <code>False</code>, <code>None</code>, <code>True</code>, <code>and</code>, <code>as</code>,
+            <code>assert</code>,
+            <code>break</code>, <code>class</code>, <code>continue</code>, <code>def</code>, <code>del</code>,
+            <code>elif</code>,
+            <code>else</code>, <code>except</code>, <code>finally</code>, <code>for</code>, <code>from</code>,
+            <code>global</code>,
+            <code>if</code>, <code>import</code>, <code>in</code>, <code>is</code>, <code>lambda</code>,
+            <code>nonlocal</code>,
+            <code>not</code>, <code>or</code>, <code>pass</code>, <code>raise</code>, <code>return</code>,
+            <code>try</code>,
+            <code>while</code>, <code>with</code>, <code>yield</code>
+            .
+        </p>
+
+        <h3>2. Identifiers</h3>
+        <p>Identifiers are names given to variables, functions, classes, or other entities in Python. They follow
+            certain rules, such as starting with a letter or underscore, and can consist of letters, numbers, and
+            underscores.</p>
+
+        <h3>3. Literals</h3>
+        <p>Literals represent constant values in Python. There are different types of literals:</p>
+        <ul>
+            <li><strong>Numeric Literals:</strong> Representing numbers, such as integers (<code>42</code>), floats
+                (<code>3.14</code>), and complex numbers (<code>2+3j</code>).</li>
+            <li><strong>String Literals:</strong> Represented by characters enclosed in single (<code>'Hello'</code>) or
+                double (<code>"World"</code>) quotes.</li>
+            <li><strong>Boolean Literals:</strong> <code>True</code> and <code>False</code> represent the truth values.
+            </li>
+            <li><strong>None:</strong> A special literal representing the absence of a value or a null value.</li>
+        </ul>
+
+        <h3>4. Operators</h3>
+        <p>Operators perform operations on variables and values. Examples include arithmetic operators (<code>+</code>,
+            <code>-</code>), comparison operators (<code>==</code>, <code>!=</code>), and logical operators
+            (<code>and</code>, <code>or</code>).
+        </p>
+
+        <h3>5. Punctuation</h3>
+        <p>Punctuation symbols are used for various purposes in Python, such as colons (<code>:</code>) to indicate the
+            start of a code block and parentheses (<code>()</code>) for function calls and expressions.</p>
+
+        <h3>6. Special Symbols</h3>
+        <p>Special symbols include <code>@</code>, used in decorators, and <code>_</code>, which is often used as a
+            throwaway variable name.</p>
+
+        <p>Understanding these Python tokens is crucial for writing and understanding Python code effectively.</p>
+    </section>
+
+    <hr>
+
+    <section id="python-data-types">
+        <h2>Understanding Python Data Types</h2>
+        <p>In Python, data types define the type of data that a variable can hold. Python is dynamically typed, meaning
+            you don't need to explicitly declare the data type of a variable. Here are common data types in Python:</p>
+
+        <h3>1. Integer (<code>int</code>)</h3>
+        <p>Whole numbers without decimal points:</p>
+        <code>age = 25</code>
+
+        <h3>2. Floating-point (<code>float</code>)</h3>
+        <p>Numbers with decimal points:</p>
+        <code>price = 10.99</code>
+
+        <h3>3. String (<code>str</code>)</h3>
+        <p>Sequence of characters enclosed in single or double quotes:</p>
+        <code>name = 'John'</code>
+
+        <h3>4. Boolean (<code>bool</code>)</h3>
+        <p>Logical values indicating <code>True</code> or <code>False</code>:</p>
+        <code>is_valid = True</code>
+
+        <h3>5. List (<code>list</code>)</h3>
+        <p>Ordered collection of items:</p>
+        <code>fruits = ['apple', 'banana', 'orange']</code>
+
+        <h3>6. Tuple (<code>tuple</code>)</h3>
+        <p>Immutable ordered collection of items:</p>
+        <code>coordinates = (10, 20)</code>
+
+        <h3>7. Dictionary (<code>dict</code>)</h3>
+        <p>Unordered collection of key-value pairs:</p>
+        <code>person = {'name': 'Alice', 'age': 30}</code>
+
+        <h3>8. Set (<code>set</code>)</h3>
+        <p>Unordered collection of unique items:</p>
+        <code>unique_numbers = {1, 2, 3, 4}</code>
+
+        <p>Python provides a rich set of built-in data types, and understanding them is essential for effective
+            programming.</p>
+    </section>
+
+    <hr>
+
+    <section id="python-data-types">
+        <h2>Understanding Python Data Types</h2>
+        <p>In Python, data types define the type of data that a variable can hold. Python is dynamically typed, meaning
+            you don't need to explicitly declare the data type of a variable. Here are common data types in Python:</p>
+
+        <h3>1. Integer (<code>int</code>)</h3>
+        <p>Whole numbers without decimal points:</p>
+        <code>age = 25</code>
+
+        <h3>2. Floating-point (<code>float</code>)</h3>
+        <p>Numbers with decimal points:</p>
+        <code>price = 10.99</code>
+
+        <h3>3. String (<code>str</code>)</h3>
+        <p>Sequence of characters enclosed in single or double quotes:</p>
+        <code>name = 'John'</code>
+
+        <h3>4. Boolean (<code>bool</code>)</h3>
+        <p>Logical values indicating <code>True</code> or <code>False</code>:</p>
+        <code>is_valid = True</code>
+
+        <h3>5. List (<code>list</code>)</h3>
+        <p>Ordered collection of items:</p>
+        <code>fruits = ['apple', 'banana', 'orange']</code>
+
+        <h3>6. Tuple (<code>tuple</code>)</h3>
+        <p>Immutable ordered collection of items:</p>
+        <code>coordinates = (10, 20)</code>
+
+        <h3>7. Dictionary (<code>dict</code>)</h3>
+        <p>Unordered collection of key-value pairs:</p>
+        <code>person = {'name': 'Alice', 'age': 30}</code>
+
+        <h3>8. Set (<code>set</code>)</h3>
+        <p>Unordered collection of unique items:</p>
+        <code>unique_numbers = {1, 2, 3, 4}</code>
+
+        <p>Python provides a rich set of built-in data types, and understanding them is essential for effective
+            programming.</p>
+    </section>
+
+    <hr>
+
+    <section id="python-variables">
+        <h2>Understanding Python Variables</h2>
+        <p>In Python, variables are used to store and represent data. They are essentially containers for storing
+            values. Here are key points about variables:</p>
+
+        <h3>1. Variable Declaration</h3>
+        <p>To create a variable, you simply choose a name for it and use the equals sign to assign a value:</p>
+        <code>variable_name = value</code>
+
+        <h3>2. Variable Naming Rules</h3>
+        <p>Variable names must follow certain rules:</p>
+        <ul>
+            <li>Must start with a letter or underscore</li>
+            <li>Can only contain letters, numbers, and underscores</li>
+            <li>Case-sensitive (e.g., <code>count</code> and <code>Count</code> are different)</li>
+            <li>Avoid using reserved words or keywords as variable names</li>
+        </ul>
+
+        <h3>3. Data Types</h3>
+        <p>Variables can hold different types of data:</p>
+        <ul>
+            <li><code>int</code>: Integer</li>
+            <li><code>float</code>: Floating-point number</li>
+            <li><code>str</code>: String</li>
+            <li><code>bool</code>: Boolean</li>
+            <li><code>list</code>: List</li>
+            <li><code>tuple</code>: Tuple</li>
+            <li><code>dict</code>: Dictionary</li>
+        </ul>
+
+        <h3>4. Variable Usage</h3>
+        <p>Once a variable is declared, you can use it in expressions, statements, and functions:</p>
+        <code>result = variable1 + variable2</code>
+
+        <p>Understanding how to declare and use variables is fundamental to programming in Python.</p>
+    </section>
+
+    <hr>
+
+    <section id="python-operators">
+        <h2>Understanding Python Operators</h2>
+        <p>In Python, operators are symbols that perform operations on variables and values. They can be categorized
+            into different types:</p>
+
+        <h3>1. Arithmetic Operators</h3>
+        <p>Arithmetic operators perform basic mathematical operations:</p>
+        <ul>
+            <li><code>+</code>: Addition</li>
+            <li><code>-</code>: Subtraction</li>
+            <li><code>*</code>: Multiplication</li>
+            <li><code>/</code>: Division</li>
+            <li><code>%</code>: Modulus</li>
+            <li><code>//</code>: Floor Division</li>
+            <li><code>**</code>: Exponentiation</li>
+        </ul>
+
+        <h3>2. Comparison Operators</h3>
+        <p>Comparison operators are used to compare values:</p>
+        <ul>
+            <li><code>==</code>: Equal to</li>
+            <li><code>!=</code>: Not equal to</li>
+            <li><code>&lt;</code>: Less than</li>
+            <li><code>&gt;</code>: Greater than</li>
+            <li><code>&lt;=</code>: Less than or equal to</li>
+            <li><code>&gt;=</code>: Greater than or equal to</li>
+        </ul>
+
+        <h3>3. Logical Operators</h3>
+        <p>Logical operators perform logical operations on boolean values:</p>
+        <ul>
+            <li><code>and</code>: Logical AND</li>
+            <li><code>or</code>: Logical OR</li>
+            <li><code>not</code>: Logical NOT</li>
+        </ul>
+
+        <h3>4. Assignment Operators</h3>
+        <p>Assignment operators are used to assign values to variables:</p>
+        <ul>
+            <li><code>=</code>: Assign</li>
+            <li><code>+=</code>: Add and assign</li>
+            <li><code>-=</code>: Subtract and assign</li>
+            <li><code>*=</code>: Multiply and assign</li>
+            <li><code>/=</code>: Divide and assign</li>
+            <li><code>%=</code>: Modulus and assign</li>
+            <li><code>//=</code>: Floor divide and assign</li>
+            <li><code>**=</code>: Exponentiate and assign</li>
+        </ul>
+
+        <p>Understanding these operators is crucial for performing various operations in Python.</p>
+    </section>
+
+    <hr>
+
+    <section id="python-strings">
+        <h2>Working with Python Strings</h2>
+        <p>Strings are sequences of characters in Python. Let's explore some common operations and features related to
+            strings:</p>
+
+        <h3>1. Concatenation</h3>
+        <p>Concatenation is the process of combining two or more strings:</p>
+        <code>
+        first_name = 'John'<br>
+        last_name = 'Doe'<br>
+        full_name = first_name + ' ' + last_name
+    </code>
+
+        <h3>2. String Methods</h3>
+        <p>Python provides numerous built-in string methods for various operations. Examples include:</p>
+        <code>
+        message = 'Hello, World!'<br>
+        length = len(message)<br>
+        uppercase = message.upper()<br>
+        lowercase = message.lower()
+    </code>
+
+        <h3>3. Format Strings</h3>
+        <p>String formatting allows you to embed expressions inside string literals:</p>
+        <code>
+        name = 'Alice'<br>
+        age = 25<br>
+        info = 'Name: {}, Age: {}'.format(name, age)
+    </code>
+
+        <h3>4. F-Strings (Formatted String Literals)</h3>
+        <p>F-strings provide a concise way to embed expressions directly in strings:</p>
+        <code>
+        name = 'Bob'<br>
+        age = 30<br>
+        info = f'Name: {name}, Age: {age}'
+    </code>
+
+        <h3>5. Raw Strings</h3>
+        <p>Raw strings treat backslashes as literal characters and are often used for regular expressions or file paths:
+        </p>
+        <code>
+        regex_pattern = r'\d{3}-\d{2}-\d{4}'<br>
+        file_path = r'C:\Users\username\file.txt'
+    </code>
+
+        <p>Understanding these string operations enhances your ability to manipulate and work with text in Python.</p>
+    </section>
+
+    <hr>
+
+    <section id="python-lists">
+        <h2>Exploring Python Lists</h2>
+        <p>A list is a versatile and mutable data structure in Python that can hold an ordered collection of items.
+            Let's delve into the details of working with lists:</p>
+
+        <h3>1. List Creation</h3>
+        <p>Create a list by enclosing items in square brackets:</p>
+        <code>
+        numbers = [1, 2, 3, 4, 5]<br>
+        fruits = ['apple', 'banana', 'orange']
+    </code>
+
+        <h3>2. Accessing Elements</h3>
+        <p>Access elements using index notation. Python uses zero-based indexing:</p>
+        <code>
+        first_fruit = fruits[0]<br>
+        last_number = numbers[-1]
+    </code>
+
+        <h3>3. Slicing</h3>
+        <p>Extract sublists using slicing. The syntax is <code>start:stop:step</code>:</p>
+        <code>
+        selected_numbers = numbers[1:4]<br>
+        every_second_fruit = fruits[::2]
+    </code>
+
+        <h3>4. Modifying Lists</h3>
+        <p>Lists are mutable; you can change, add, or remove elements:</p>
+        <code>
+        numbers[2] = 10  # Modify an element<br>
+        fruits.append('grape')  # Add an element to the end<br>
+        del fruits[1]  # Remove an element by index
+    </code>
+
+        <h3>5. List Methods</h3>
+        <p>Python provides various built-in methods for list manipulation:</p>
+        <code>
+        fruits.sort()  # Sort the list<br>
+        fruits.reverse()  # Reverse the order of elements<br>
+        length = len(fruits)  # Get the length of the list
+    </code>
+
+        <h3>6. List Comprehension</h3>
+        <p>Create lists using concise and readable expressions:</p>
+        <code>
+        squares = [x**2 for x in numbers]<br>
+        even_numbers = [x for x in numbers if x % 2 == 0]
+    </code>
+
+        <h3>7. Nesting Lists</h3>
+        <p>Lists can contain other lists, creating nested structures:</p>
+        <code>
+        matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    </code>
+
+        <p>Understanding lists is fundamental to many aspects of Python programming, from data manipulation to algorithm
+            implementation.</p>
+    </section>
+
+    <hr>
+
+    <section id="python-dictionaries">
+        <h2>Exploring Python Dictionaries</h2>
+        <p>A dictionary in Python is a mutable and unordered collection of key-value pairs. It allows you to store and
+            retrieve data efficiently. Let's delve into the details of working with dictionaries:</p>
+
+        <h3>1. Dictionary Creation</h3>
+        <p>Create a dictionary by enclosing key-value pairs in curly braces:</p>
+        <code>
+        person = {'name': 'Alice', 'age': 25, 'city': 'Wonderland'}<br>
+        student = dict(roll_number=101, grade='A')
+    </code>
+
+        <h3>2. Accessing Values</h3>
+        <p>Access values using keys:</p>
+        <code>
+        person_name = person['name']<br>
+        student_grade = student.get('grade', 'N/A')  # Use get to provide a default value if the key is not present
+    </code>
+
+        <h3>3. Modifying and Adding Items</h3>
+        <p>Dictionaries are mutable; you can change, add, or remove key-value pairs:</p>
+        <code>
+        person['age'] = 26  # Modify a value<br>
+        person['occupation'] = 'Engineer'  # Add a new key-value pair<br>
+        del student['grade']  # Remove a key-value pair
+    </code>
+
+        <h3>4. Dictionary Methods</h3>
+        <p>Python provides various built-in methods for dictionary manipulation:</p>
+        <code>
+        keys = person.keys()  # Get a list of keys<br>
+        values = person.values()  # Get a list of values<br>
+        items = person.items()  # Get a list of key-value pairs
+    </code>
+
+        <h3>5. Dictionary Comprehension</h3>
+        <p>Create dictionaries using concise and readable expressions:</p>
+        <code>
+        squares = {x: x**2 for x in range(5)}<br>
+        even_numbers = {x: x for x in range(10) if x % 2 == 0}
+    </code>
+
+        <p>Dictionaries are versatile and widely used for representing data with a key-based structure in Python
+            programming.</p>
+    </section>
+
+    <hr>
+
+    <section id="python-tuples">
+        <h2>Exploring Python Tuples</h2>
+        <p>A tuple in Python is an immutable and ordered collection of elements. Once created, the elements of a tuple
+            cannot be changed. Let's delve into the details of working with tuples:</p>
+
+        <h3>1. Tuple Creation</h3>
+        <p>Create a tuple by enclosing elements in parentheses:</p>
+        <code>
+        coordinates = (10, 20)<br>
+        colors = ('red', 'green', 'blue')
+    </code>
+
+        <h3>2. Accessing Elements</h3>
+        <p>Access elements using index notation. Like lists, tuples use zero-based indexing:</p>
+        <code>
+        x_coordinate = coordinates[0]<br>
+        last_color = colors[-1]
+    </code>
+
+        <h3>3. Slicing</h3>
+        <p>Use slicing to extract sub-tuples:</p>
+        <code>
+        selected_colors = colors[1:3]<br>
+        every_second_coordinate = coordinates[::2]
+    </code>
+
+        <h3>4. Tuple Methods</h3>
+        <p>Since tuples are immutable, they have fewer methods compared to lists. Common methods include:</p>
+        <code>
+        length = len(coordinates)<br>
+        index = colors.index('green')<br>
+        count = colors.count('red')
+    </code>
+
+        <h3>5. Tuple Unpacking</h3>
+        <p>Assign values of a tuple to variables in a single line:</p>
+        <code>
+        x, y = coordinates
+    </code>
+
+        <h3>6. Use Cases</h3>
+        <p>Tuples are often used for:</p>
+        <ul>
+            <li>Representing fixed collections of items</li>
+            <li>Returning multiple values from a function</li>
+            <li>As keys in dictionaries (since they are immutable)</li>
+        </ul>
+
+        <p>Understanding tuples provides an additional tool for organizing and working with data in Python.</p>
+    </section>
+
+    <hr>
+
+    <section id="python-sets">
+        <h2>Exploring Python Sets</h2>
+        <p>A set in Python is an unordered and mutable collection of unique elements. It is useful for tasks that
+            involve membership testing, eliminating duplicate entries, and set operations. Let's delve into the details
+            of working with sets:</p>
+
+        <h3>1. Set Creation</h3>
+        <p>Create a set by enclosing elements in curly braces:</p>
+        <code>
+        unique_numbers = {1, 2, 3, 4, 5}<br>
+        vowels = set('aeiou')
+    </code>
+
+        <h3>2. Accessing and Checking Membership</h3>
+        <p>Since sets are unordered, they don't support indexing. You can check membership using the <code>in</code>
+            keyword:</p>
+        <code>
+        is_present = 3 in unique_numbers<br>
+        is_vowel = 'a' in vowels
+    </code>
+
+        <h3>3. Set Operations</h3>
+        <p>Perform various set operations like union, intersection, and difference:</p>
+        <code>
+        set1 = {1, 2, 3}<br>
+        set2 = {3, 4, 5}<br>
+        union_set = set1 | set2  # Union<br>
+        intersection_set = set1 & set2  # Intersection<br>
+        difference_set = set1 - set2  # Difference
+    </code>
+
+        <h3>4. Set Methods</h3>
+        <p>Common set methods include:</p>
+        <code>
+        vowels.add('u')  # Add an element to the set<br>
+        vowels.remove('i')  # Remove an element from the set<br>
+        length = len(vowels)  # Get the number of elements in the set
+    </code>
+
+        <h3>5. Frozen Sets</h3>
+        <p>Python provides a <code>frozenset</code> type, which is immutable and can be used as a key in dictionaries:
+        </p>
+        <code>
+        frozen_set = frozenset([1, 2, 3])
+    </code>
+
+        <p>Understanding sets is valuable for tasks that involve managing unique elements and performing set operations.
+        </p>
+    </section>
+
+    <hr>
+
+    <section id="python-conditional-statements">
+        <h2>Conditional Statements in Python</h2>
+        <p>Conditional statements allow you to control the flow of your program based on different conditions. Let's
+            explore the traditional <code>if-elif-else</code> statements and the newer <code>match-case</code>
+            introduced in Python 3.10:</p>
+
+        <h3>1. If-Elif-Else Statements</h3>
+        <p>Use <code>if</code>, <code>elif</code> (else if), and <code>else</code> to handle multiple conditions:</p>
+        <code>
+        age = 25<br>
+        if age < 18:<br>
+        &emsp;print("You are a minor")<br>
+        elif 18 <= age < 65:<br>
+        &emsp;print("You are an adult")<br>
+        else:<br>
+        &emsp;print("You are a senior")
+    </code>
+
+        <h3>2. Match-Case (Python 3.10+)</h3>
+        <p>The <code>match-case</code> statement provides a more structured way to handle multiple conditions:</p>
+        <code>
+        age_group = match age:<br>
+        &emsp;case _ if age < 18 => "You are a minor"<br>
+        &emsp;case 18 | 19 | 20 => "You are a young adult"<br>
+        &emsp;case 21..64 => "You are an adult"<br>
+        &emsp;case _ => "You are a senior"
+    </code>
+
+        <h3>3. Ternary Operator</h3>
+        <p>For concise conditional expressions, you can use the ternary operator:</p>
+        <code>
+        result = "Even" if number % 2 == 0 else "Odd"
+    </code>
+
+        <h3>4. Multiple Conditions</h3>
+        <p>Combine conditions using logical operators (<code>and</code>, <code>or</code>):</p>
+        <code>
+        if x > 0 and y > 0:<br>
+        &emsp;print("Both x and y are positive")
+    </code>
+
+        <p>Understanding conditional statements is crucial for writing flexible and dynamic programs.</p>
+    </section>
+
+    <hr>
+
+    <section id="python-loops">
+        <h2>Loops in Python</h2>
+        <p>Loops allow you to repeatedly execute a block of code. Python supports <code>for</code> loops,
+            <code>while</code> loops, and provides mechanisms like <code>break</code> and <code>continue</code> for more
+            control. Let's explore the different aspects of loops:
+        </p>
+
+        <h3>1. For Loop</h3>
+        <p>Use a <code>for</code> loop to iterate over a sequence (e.g., a list, tuple, or string):</p>
+        <code>
+        numbers = [1, 2, 3, 4, 5]<br>
+        for num in numbers:<br>
+        &emsp;print(num)
+    </code>
+
+        <h3>2. While Loop</h3>
+        <p>Use a <code>while</code> loop to repeatedly execute a block of code as long as a condition is true:</p>
+        <code>
+        count = 0<br>
+        while count < 5:<br>
+        &emsp;print(count)<br>
+        &emsp;count += 1
+    </code>
+
+        <h3>3. Nested Loops</h3>
+        <p>You can have loops inside loops (nested loops) for more complex iterations:</p>
+        <code>
+        for i in range(3):<br>
+        &emsp;for j in range(2):<br>
+        &emsp;&emsp;print(i, j)
+    </code>
+
+        <h3>4. Break and Continue</h3>
+        <p>Use <code>break</code> to exit a loop prematurely and <code>continue</code> to skip the rest of the code
+            inside the loop for the current iteration:</p>
+        <code>
+        for num in numbers:<br>
+        &emsp;if num == 3:<br>
+        &emsp;&emsp;break<br>
+        &emsp;print(num)
+    </code>
+
+        <h3>5. Simulating a Do-While Loop</h3>
+        <p>Python doesn't have a built-in <code>do-while</code> loop, but you can simulate it with a <code>while</code>
+            loop:</p>
+        <code>
+        while True:<br>
+        &emsp;# Code to be executed at least once<br>
+        &emsp;if condition:<br>
+        &emsp;&emsp;break
+    </code>
+
+        <p>Understanding loops and their control statements is essential for creating efficient and dynamic programs.
+        </p>
+    </section>
+
+    <hr>
+
+    <section id="python-functions">
+        <h2>Functions, Recursions, and Annotations</h2>
+        <p>Functions in Python allow you to encapsulate a block of code, making it reusable. Let's explore how to define
+            functions, use recursion, handle return statements, and specify argument types with annotations:</p>
+
+        <h3>1. Function Definition</h3>
+        <p>Define a function using the <code>def</code> keyword:</p>
+        <code>
+        def greet(name):<br>
+        &emsp;print(f"Hello, {name}!")
+    </code>
+
+        <h3>2. Return Statement</h3>
+        <p>Use the <code>return</code> statement to send a value back from a function:</p>
+        <code>
+        def add_numbers(x, y):<br>
+        &emsp;result = x + y<br>
+        &emsp;return result
+    </code>
+
+        <h3>3. Arguments and Their Types</h3>
+        <p>Functions can take arguments, and you can specify their types:</p>
+        <code>
+        def example_function(arg1: int, arg2: str) -> bool:<br>
+        &emsp;# Function body<br>
+        &emsp;return True
+    </code>
+
+        <h3>4. Variable Type Hints</h3>
+        <p>Use variable type hints to indicate the expected type of a variable:</p>
+        <code>
+        def calculate_area(radius: float) -> float:<br>
+        &emsp;pi: float = 3.14<br>
+        &emsp;area: float = pi * radius**2<br>
+        &emsp;return area
+    </code>
+
+        <h3>5. Recursion</h3>
+        <p>Recursion is when a function calls itself. For example, a recursive function to calculate the factorial of a
+            number:</p>
+        <code>
+        def factorial(n):<br>
+        &emsp;if n == 0 or n == 1:<br>
+        &emsp;&emsp;return 1<br>
+        &emsp;else:<br>
+        &emsp;&emsp;return n * factorial(n - 1)
+    </code>
+
+        <p>Understanding functions, their parameters, return values, and annotations is crucial for modular and
+            maintainable code.</p>
+    </section>
+
+    <hr>
+
+    <section id="python-file-handling">
+        <h2>File Handling in Python</h2>
+        <p>File handling allows you to work with files on your computer. Python provides built-in functions to open,
+            read, write, and close files. Let's explore the basics of file handling:</p>
+
+        <h3>1. Opening a File</h3>
+        <p>Use the <code>open()</code> function to open a file. Specify the file path and the mode (read, write, append,
+            etc.):</p>
+        <code>
+        # Opening a file for reading<br>
+        with open('example.txt', 'r') as file:<br>
+        &emsp;content = file.read()<br><br>
+        
+        # Opening a file for writing (creates a new file if it doesn't exist)<br>
+        with open('new_file.txt', 'w') as file:<br>
+        &emsp;file.write('Hello, World!')
+    </code>
+
+        <h3>2. Reading from a File</h3>
+        <p>Use various methods to read content from a file:</p>
+        <code>
+        # Reading the entire content<br>
+        with open('example.txt', 'r') as file:<br>
+        &emsp;content = file.read()<br><br>
+        
+        # Reading lines into a list<br>
+        with open('example.txt', 'r') as file:<br>
+        &emsp;lines = file.readlines()
+    </code>
+
+        <h3>3. Writing to a File</h3>
+        <p>Use the <code>write()</code> method to add content to a file:</p>
+        <code>
+        with open('new_file.txt', 'w') as file:<br>
+        &emsp;file.write('This is a new line.')
+    </code>
+
+        <h3>4. Appending to a File</h3>
+        <p>Use the <code>append()</code> mode to add content to the end of an existing file:</p>
+        <code>
+        with open('existing_file.txt', 'a') as file:<br>
+        &emsp;file.write('Appending this line.')
+    </code>
+
+        <h3>5. Closing a File</h3>
+        <p>Files should be closed after use. Using the <code>with</code> statement ensures proper closing even if an
+            exception occurs:</p>
+        <code>
+        with open('example.txt', 'r') as file:<br>
+        &emsp;content = file.read()<br>
+        # File is automatically closed after this block
+    </code>
+
+        <p>Understanding file handling is essential for working with external data and managing information
+            persistently.</p>
+    </section>
+
+    <hr>
+
+    <section id="python-import-statements">
+        <h2>Import Statements, Modules, and Packages</h2>
+        <p>Python allows you to organize code into reusable components using modules and packages. Import statements
+            bring functionality from these modules and packages into your code. Let's explore how to use import
+            statements and understand modules and packages:</p>
+
+        <h3>1. Importing Modules</h3>
+        <p>Use the <code>import</code> keyword to bring a module into your script. Access functions, classes, or
+            variables from the module using dot notation:</p>
+        <code>
+        import math<br>
+        result = math.sqrt(25)
+    </code>
+
+        <h3>2. Renaming Modules</h3>
+        <p>You can give a module a different alias using the <code>as</code> keyword:</p>
+        <code>
+        import math as m<br>
+        result = m.sqrt(25)
+    </code>
+
+        <h3>3. Importing Specific Items</h3>
+        <p>You can import specific functions, classes, or variables from a module:</p>
+        <code>
+        from math import sqrt<br>
+        result = sqrt(25)
+    </code>
+
+        <h3>4. Importing Everything</h3>
+        <p>Use caution with <code>from module import *</code>. It imports all items from the module, and it may lead to
+            naming conflicts:</p>
+        <code>
+        from math import *<br>
+        result = sqrt(25)
+    </code>
+
+        <h3>5. Creating Your Own Modules</h3>
+        <p>A module is simply a Python script. You can create your own modules by writing functions, classes, or
+            variables in a separate script and then importing them into other scripts.</p>
+
+        <h3>6. Packages</h3>
+        <p>A package is a way of organizing related modules into a single directory hierarchy. A package must contain a
+            special file called <code>__init__.py</code>.</p>
+
+        <h3>7. The <code>if __name__ == "__main__"</code> Condition</h3>
+        <p>The <code>if __name__ == "__main__"</code> condition is used to check whether the Python script is being run
+            as the main program or if it is being imported as a module into another script. Code inside this condition
+            will only run if the script is executed directly:</p>
+        <code>
+        if __name__ == "__main__":<br>
+        &emsp;# Code to be executed when the script is run directly
+    </code>
+
+        <p>Understanding import statements, modules, and packages is essential for building modular and maintainable
+            Python projects.</p>
+    </section>
+
+    <section>
+        <h2 id="content-soon" style="color: rgb(209, 157, 78);">Thanks for staying! More content will be added soon...
+        </h2>
+
+    </section>
+    <hr>
+
+
+
+
+    <footer>
+        <p>&copy; 2024 Krishna Anand</p>
+    </footer>
+
 </body>
 
 </html>
